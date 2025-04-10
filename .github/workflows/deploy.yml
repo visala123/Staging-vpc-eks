@@ -22,20 +22,20 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-        working-directory: ./staging
+        working-directory: ./staging/modules
       - name: Terraform Validate
         id: validate
         run: terraform validate
-        working-directory: ./staging
+        working-directory: ./staging/modules
       - name: Terraform Plan
         id: plan
         run: terraform plan
-        working-directory: ./staging
+        working-directory: ./staging/modules
         name: Terraform Apply
         id: apply
         run: terraform apply --auto-approve
-        working-directory: ./staging
+        working-directory: ./staging/modules
       - name: Terraform Destroy
         id: destroy
         run: terraform destroy --auto-approve
-        working-directory: ./staging
+        working-directory: ./staging/modules
