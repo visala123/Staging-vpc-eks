@@ -5,7 +5,7 @@ resource "aws_subnet" "public-webtier-subnet-1" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "stage-eks-cluster-subnet-public1-us-east-1a"
+    Name = "stage1-eks-cluster-subnet-public1-us-east-1a"
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_subnet" "public-webtier-subnet-2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "stage-eks-cluster-subnet-public2-us-east-1b"
+    Name = "stage1-eks-cluster-subnet-public2-us-east-1b"
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_subnet" "private-apptier-subnet-1" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "stage-eks-cluster-subnet-private1-us-east-1"
+    Name = "stage1-eks-cluster-subnet-private1-us-east-1"
   }
 }
 
@@ -45,7 +45,7 @@ resource "aws_subnet" "private-apptier-subnet-2" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "stage-eks-cluster-subnet-private2-us-east-1b"
+    Name = "stage1-eks-cluster-subnet-private2-us-east-1b"
   }
 }
 
@@ -59,7 +59,7 @@ resource "aws_subnet" "private-database-subnet-1" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "stage-eks-cluster-subnet-private3-us-east-1a"
+    Name = "stage1-eks-cluster-subnet-private3-us-east-1a"
   }
 }
 
@@ -74,6 +74,6 @@ resource "aws_subnet" "private-database-subnet-2" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "stage-eks-cluster-subnet-private4-us-east-1b"
+    Name = "stage1-eks-cluster-subnet-private4-us-east-1b"
   }
 }

@@ -118,7 +118,7 @@ resource "aws_security_group" "sg" {
   ]
 
   tags = {
-    Name = "eks-cluster-sg-staging-eks-cluster-349615576"
+    Name = "eks-cluster-sg-staging1-eks-cluster-349615576"
   }
 } 
         

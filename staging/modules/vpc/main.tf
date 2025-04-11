@@ -4,7 +4,7 @@ resource "aws_vpc" "my_vpc" {
     instance_tenancy = "default"
 
     tags = {
-      "Name" = "staging-eks-cluster-vpc"
+      "Name" = "staging1-eks-cluster-vpc"
     }
 }
 
