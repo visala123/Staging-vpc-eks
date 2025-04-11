@@ -21,6 +21,6 @@ module "eks" {
   scaling_max_size        = 4
   scaling_min_size        = 1
   instance_types          = ["t2.large"]
-  key_pair                = "keypair"
+  key_pair                = "staging-eks-jumphost-keypair"
 }
 
