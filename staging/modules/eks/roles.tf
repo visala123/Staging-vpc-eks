@@ -1,4 +1,4 @@
-resource "aws_iam_role" "staging-eks-cluster-role" {
+resource "aws_iam_role" "staging1-eks-cluster-role" {
   name = "staging1-eks-cluster-role"
 
   assume_role_policy = <<POLICY
