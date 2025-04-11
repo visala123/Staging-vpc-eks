@@ -11,7 +11,7 @@ resource "aws_route_table" "private-route-table1" {
   }*/
 
   tags = {
-    Name = "stage-eks-cluster-rtb-private1-us-east-1a"
+    Name = "stage1-eks-cluster-rtb-private1-us-east-1a"
   }
 }
 resource "aws_route_table" "private-route-table2" {
@@ -27,7 +27,7 @@ resource "aws_route_table" "private-route-table2" {
   }*/
 
   tags = {
-    Name = "stage-eks-cluster-rtb-private2-us-east-1b"
+    Name = "stage1-eks-cluster-rtb-private2-us-east-1b"
   }
 }
 resource "aws_route_table" "private-route-table3" {
@@ -43,7 +43,7 @@ resource "aws_route_table" "private-route-table3" {
   }*/
 
   tags = {
-    Name = "stage-eks-cluster-rtb-private3-us-east-1a"
+    Name = "stage1-eks-cluster-rtb-private3-us-east-1a"
   }
 }
 resource "aws_route_table" "private-route-table4" {
@@ -59,7 +59,7 @@ resource "aws_route_table" "private-route-table4" {
   }*/
 
   tags = {
-    Name = "stage-eks-cluster-rtb-private4-us-east-1b"
+    Name = "stage1-eks-cluster-rtb-private4-us-east-1b"
   }
 }
 

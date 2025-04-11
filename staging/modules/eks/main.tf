@@ -1,6 +1,6 @@
-resource "aws_eks_cluster" "staging-eks-cluster" {
+resource "aws_eks_cluster" "staging1-eks-cluster" {
   name     = var.cluster_name
-  role_arn = aws_iam_role.staging-eks-cluster-role.arn
+  role_arn = aws_iam_role.staging1-eks-cluster-role.arn
 
   vpc_config {
     subnet_ids              = var.subnet_ids
@@ -11,15 +11,15 @@ resource "aws_eks_cluster" "staging-eks-cluster" {
   }
 
   depends_on = [
-    aws_iam_role_policy_attachment.stage-AmazonEKSClusterPolicy,
-    aws_iam_role_policy_attachment.stage-AmazonRDSFullAccess,
+    aws_iam_role_policy_attachment.stage1-AmazonEKSClusterPolicy,
+    aws_iam_role_policy_attachment.stage1-AmazonRDSFullAccess,
   ]
 }
 
-resource "aws_eks_node_group" "staging-eks-worker-node-group" {
-  cluster_name    = aws_eks_cluster.staging-eks-cluster.name
+resource "aws_eks_node_group" "staging1-eks-worker-node-group" {
+  cluster_name    = aws_eks_cluster.staging1-eks-cluster.name
   node_group_name = var.node_group_name
-  node_role_arn   = aws_iam_role.staging-eks-node-group-role.arn
+  node_role_arn   = aws_iam_role.staging1-eks-node-group-role.arn
   subnet_ids      = var.subnet_ids
   instance_types  = var.instance_types
 
@@ -35,9 +35,9 @@ resource "aws_eks_node_group" "staging-eks-worker-node-group" {
   }
 
   depends_on = [
-    aws_iam_role_policy_attachment.stage-AmazonEKSWorkerNodePolicy,
-    aws_iam_role_policy_attachment.stage-AmazonEC2FullAccess,
-    aws_iam_role_policy_attachment.stage-AmazonEC2ContainerRegistryReadOnly,
+    aws_iam_role_policy_attachment.stage1-AmazonEKSWorkerNodePolicy,
+    aws_iam_role_policy_attachment.stage1-AmazonEC2FullAccess,
+    aws_iam_role_policy_attachment.stage1-AmazonEC2ContainerRegistryReadOnly,
   ]
 }
 

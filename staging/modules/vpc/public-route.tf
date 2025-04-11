@@ -11,7 +11,7 @@ resource "aws_route_table" "rt" {
     gateway_id = "local"
   }*/
   tags = {
-    "Name" = "stage-eks-cluster-rtb-public"
+    "Name" = "stage1-eks-cluster-rtb-public"
   }
 }
 
