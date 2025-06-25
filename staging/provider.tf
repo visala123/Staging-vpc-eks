@@ -15,8 +15,8 @@ terraform {
 
   }
   backend "s3" {
-    bucket = "terraform-backend-remote-vpc-github-actions"
-    key    = "stage\terraform.tfstate"
+    bucket = "terraform-backend-remote-staging1"
+    key    = "stage1\terraform.tfstate"
     region = "us-east-1"
   }
 }
