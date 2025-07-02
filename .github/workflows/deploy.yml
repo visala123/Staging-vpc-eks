@@ -36,6 +36,6 @@ jobs:
       #   run: terraform apply --auto-approve
       #   working-directory: ./staging
       - name: Terraform Destroy
-       id: destroy
-       run: terraform destroy --auto-approve
-       working-directory: ./staging
+        id: destroy
+        run: terraform destroy --auto-approve
+        working-directory: ./staging
